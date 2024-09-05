@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
     MlkitBarcodeUIPrebuilt \
     VisionBarcodePrebuilt
 
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/extras/prebuilt/product/media/audio/ui,$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui)
+
 ifeq ($(WITH_GAPPS),true)
 # Sounds
 PRODUCT_COPY_FILES += \
